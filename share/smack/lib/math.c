@@ -80,7 +80,7 @@ float truncf(float x) {
 
 float sqrtf(float x) {
   double ret = __VERIFIER_nondet_double();
-  __SMACK_code("@ := $sqrt.bvfloat(dtf(@));", ret, x);
+  __SMACK_code("@ := ftd($sqrt.bvfloat(dtf(@)));", ret, x);
   return ret;
 }
 
@@ -98,7 +98,7 @@ float fminf(float x, float y) {
 
 float fmaxf(float x, float y) {
   double ret = __VERIFIER_nondet_double();
-  __SMACK_code("@ := $max.bvfloat(dtf(@), dtf(@));", ret, x, y);
+  __SMACK_code("@ := ftd($max.bvfloat(dtf(@), dtf(@)));", ret, x, y);
   return ret;
 }
 
